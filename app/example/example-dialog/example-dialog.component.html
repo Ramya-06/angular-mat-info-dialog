@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>{{ title }}</h1>
+<div mat-dialog-content>
+  <div *ngFor="let item of infoItems">
+    <mat-card>
+      <mat-icon [svgIcon]=""> </mat-icon>
+      <mat-card-title> {{ item.topic }} </mat-card-title>
+      <mat-card-content>
+        <p>{{ item.text }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>
+      Ok
+    </button>
+  </div>
+</div>
